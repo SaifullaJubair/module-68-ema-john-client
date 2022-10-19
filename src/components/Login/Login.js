@@ -1,9 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 const Login = () => {
    return (
-      <div>
-         <h2>This is Login</h2>
+      <div className='form-container'>
+         <h2 className='form-title'>Login</h2>
+         <form className='' >
+            <div className="form-control">
+               <label htmlFor="email">Email</label>
+               <input type="email" name="email" placeholder='Your Email' id="" required />
+            </div>
+            <div className="form-control">
+               <label htmlFor="password">Password</label>
+               <input type="password" name="password" placeholder='Your Password' id="" required />
+            </div>
+            <input className='btn-submit' type="submit" value="login" />
+         </form>
+         <p>New to ema john <Link to='/signup'>Create a new Account</Link> </p>
       </div>
    );
 };
