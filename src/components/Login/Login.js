@@ -23,7 +23,6 @@ const Login = () => {
          .then(res => {
             const user = res.user;
             console.log(user)
-            // notify()
             form.reset()
             navigate(from, { replace: true })
          })
