@@ -14,7 +14,7 @@ const Orders = () => {
         removeFromDb(id);
     }
 
-    const clearCart = () => {
+    const clearCart = () =>{
         setCart([]);
         deleteShoppingCart();
     }

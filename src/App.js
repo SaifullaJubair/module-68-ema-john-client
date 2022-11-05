@@ -15,7 +15,7 @@ import PrivateRoute from './routes/PrivateRoute';
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path:'/',
       element: <Main></Main>,
       children: [
         {
@@ -24,7 +24,7 @@ function App() {
           element: <Shop></Shop>
         },
         {
-          path: 'orders',
+          path:'orders',
           loader: productsAndCartLoader,
           element: <Orders></Orders>
         },
@@ -37,20 +37,20 @@ function App() {
           element: <PrivateRoute><Shipping></Shipping></PrivateRoute>
         },
         {
-          path: 'about',
-          element: <About></About>
+          path:'about',
+          element:<About></About>
         },
         {
-          path: '/signup',
-          element: <SignUp></SignUp>
-        },
-        {
-          path: '/login',
+          path: 'login',
           element: <Login></Login>
+        },
+        {
+          path: 'signup',
+          element: <SignUp></SignUp>
         }
       ]
     },
-
+    
   ])
   return (
     <div>
